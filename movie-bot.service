@@ -1,0 +1,15 @@
+[Unit]
+Description=Movie Anime Bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/movie-bot
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 complete_movie_anime_bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
